@@ -1,0 +1,51 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+
+:root{
+	--primary-color:#032541;
+	--secondary-color:#373b69;
+	--color-white:#fff;
+	--color-dark:#000;
+}
+
+body{
+	background-color:var(--secondary-color);
+	color:var(--color-white);
+}
+
+.acco-head{
+	background-color:var(--color-white);
+	color:var(--primary-color);
+	padding:10px;
+	text-transform:uppercase;
+	margin:0;
+	cursor:pointer;
+	position:relative;
+}
+.acco-head.active{
+	background-color:orange;
+	color:var(--color-white);
+}
+p.acco-content{
+	margin:0;
+	padding:15px;
+	border:1px solid var(--color-white);
+	display:none;
+}
+.acco-head.active + .acco-content{
+	display:block;
+}
+
+.acco-head::before{
+	content:'+';
+	position:absolute;
+	top:5px;
+	right:15px;
+}
+
+.acco-head.active::before{
+	content:'-';
+}
